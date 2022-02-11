@@ -14,5 +14,10 @@ app.get('/', (req, res) => {
     res.send("Index")
 })
 
+app.use('/person', require('./routes/person'));
+app.use('/movie', require('./routes/movie'));
+app.use('/shows', require('./routes/shows'));
+app.use('/users', require('./routes/users'));
+app.use('/info', require('./routes/info'));
 
 app.listen(PORT, console.log("API listening to port: ", PORT));
